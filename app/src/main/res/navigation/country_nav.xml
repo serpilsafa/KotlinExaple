@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/country_nav"
+    app:startDestination="@id/showCountriesListFragment">
+
+    <fragment
+        android:id="@+id/showCountriesListFragment"
+        android:name="com.safa.kotlinexample.view.ShowCountriesListFragment"
+        android:label="fragment_show_countries_list2"
+        tools:layout="@layout/fragment_show_countries_list2" >
+        <action
+            android:id="@+id/action_showCountriesListFragment_to_countryDetailFragment"
+            app:destination="@id/countryDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryDetailFragment"
+        android:name="com.safa.kotlinexample.view.CountryDetailFragment"
+        android:label="fragment_country_detail"
+        tools:layout="@layout/fragment_country_detail" >
+        <action
+            android:id="@+id/action_countryDetailFragment_to_showCountriesListFragment"
+            app:destination="@id/showCountriesListFragment" />
+    </fragment>
+</navigation>
