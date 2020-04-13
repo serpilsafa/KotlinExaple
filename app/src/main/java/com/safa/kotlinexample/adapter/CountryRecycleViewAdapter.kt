@@ -7,6 +7,8 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.safa.kotlinexample.R
 import com.safa.kotlinexample.model.Country
+import com.safa.kotlinexample.util.PlaceholderDrawable
+import com.safa.kotlinexample.util.downloadImage
 import com.safa.kotlinexample.view.ShowCountriesListFragmentDirections
 import kotlinx.android.synthetic.main.country_recycleview_row.view.*
 
@@ -36,6 +38,8 @@ class CountryRecycleViewAdapter(val countryList: ArrayList<Country>): RecyclerVi
             val action = ShowCountriesListFragmentDirections.actionShowCountriesListFragmentToCountryDetailFragment()
             Navigation.findNavController(it).navigate(action)
         }
+
+        holder.itemView.flagImageView.downloadImage(countryList[position].countryFlag, PlaceholderDrawable(holder.itemView.context) )
     }
 
     fun updateRecycleView(newList: List<Country>){
