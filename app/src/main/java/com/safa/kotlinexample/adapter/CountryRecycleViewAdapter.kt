@@ -31,7 +31,6 @@ class CountryRecycleViewAdapter(val countryList: ArrayList<Country>): RecyclerVi
         holder.itemView.country.text = countryList[position].countryName
         holder.itemView.capital.text = countryList[position].countryCapital
 
-        println(" test countryList[position].countryName "+ countryList[position].countryName)
 
         holder.itemView.setOnClickListener {
             val action = ShowCountriesListFragmentDirections.actionShowCountriesListFragmentToCountryDetailFragment()
