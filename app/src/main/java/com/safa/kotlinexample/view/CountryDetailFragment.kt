@@ -28,9 +28,6 @@ class CountryDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        goList.setOnClickListener {
-            val action = CountryDetailFragmentDirections.actionCountryDetailFragmentToShowCountriesListFragment()
-            findNavController().navigate(action)
-        }
+
     }
 }
