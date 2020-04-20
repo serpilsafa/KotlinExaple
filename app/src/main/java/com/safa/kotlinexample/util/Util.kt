@@ -2,6 +2,7 @@ package com.safa.kotlinexample.util
 
 import android.content.Context
 import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
@@ -28,4 +29,9 @@ fun PlaceholderDrawable(context: Context): CircularProgressDrawable{
         centerRadius = 40f
         start()
     }
+}
+
+@BindingAdapter("android:imageDownload")
+fun imageDownload(imageView: ImageView, url: String?){
+    imageView.downloadImage(url, PlaceholderDrawable(imageView.context))
 }

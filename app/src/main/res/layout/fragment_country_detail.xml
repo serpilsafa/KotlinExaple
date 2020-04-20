@@ -1,67 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingTop="20dp"
-    tools:context=".view.CountryDetailFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/countryFlag"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:src="@android:drawable/btn_star_big_on" />
+    <data>
+        <variable
+            name="selectedCountry"
+            type="com.safa.kotlinexample.model.Country" />
+    </data>
 
-    <TextView
-        android:id="@+id/countryName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="#2E1717"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/countryCapital"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="#2E1717"
-        android:textSize="18sp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        tools:context=".view.CountryDetailFragment">
 
-    <TextView
-        android:id="@+id/countryZone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="#2E1717"
-        android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/countryFlag"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:imageDownload="@{selectedCountry.countryFlag}"
+            android:src="@android:drawable/btn_star_big_on" />
 
-    <TextView
-        android:id="@+id/countryCurrency"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="#2E1717"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/countryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@{selectedCountry.countryName}"
+            android:textAlignment="center"
+            android:textColor="#2E1717"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/countryLanguage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="#2E1717"
-        android:textSize="18sp" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/countryCapital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@{selectedCountry.countryCapital}"
+            android:textAlignment="center"
+            android:textColor="#2E1717"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/countryZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@{selectedCountry.countryZone}"
+            android:textAlignment="center"
+            android:textColor="#2E1717"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/countryCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@{selectedCountry.countryCurrency}"
+            android:textAlignment="center"
+            android:textColor="#2E1717"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/countryLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@{selectedCountry.countryLanguage}"
+            android:textAlignment="center"
+            android:textColor="#2E1717"
+            android:textSize="18sp" />
+    </LinearLayout>
+</layout>
