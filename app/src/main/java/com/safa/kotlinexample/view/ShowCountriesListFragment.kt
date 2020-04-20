@@ -44,7 +44,7 @@ class ShowCountriesListFragment : Fragment() {
         }*/
 
         viewModel = ViewModelProviders.of(this).get(ShowCountryListViewModel::class.java)
-        viewModel.refreshDataFromApi()
+        viewModel.refleshData()
 
         recycleView.layoutManager = LinearLayoutManager(context)
         recycleView.adapter = adapter

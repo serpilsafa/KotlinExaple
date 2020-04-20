@@ -9,7 +9,7 @@
     tools:context=".view.CountryDetailFragment">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/countryFlag"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:src="@android:drawable/btn_star_big_on" />

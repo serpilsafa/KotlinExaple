@@ -22,5 +22,8 @@
         <action
             android:id="@+id/action_countryDetailFragment_to_showCountriesListFragment"
             app:destination="@id/showCountriesListFragment" />
+        <argument
+            android:name="uuid"
+            app:argType="integer" />
     </fragment>
 </navigation>
